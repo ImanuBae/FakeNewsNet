@@ -1,0 +1,8 @@
+FAKE NEWS CLASSIFICATION RESULTS
+============================================================
+
+Naive Bayes: 0.7594
+Logistic Regression: 0.7830
+Random Forest: 0.7358
+
+Best Model: Logistic Regression

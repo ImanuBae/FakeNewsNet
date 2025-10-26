@@ -1,0 +1,9 @@
+THỐNG KÊ DATASET FAKENEWSNET
+============================================================
+
+PolitiFact Fake: 432 bài
+PolitiFact Real: 624 bài
+GossipCop Fake: 5323 bài
+GossipCop Real: 16817 bài
+
+Các cột: ['id', 'news_url', 'title', 'tweet_ids']
