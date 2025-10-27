@@ -119,37 +119,37 @@ with st.sidebar:
 # Main input
 st.header("📝 Enter News Text")
 
-user_input = st.text_area(
-    "Paste news title or content:",
-    height=150,
-    placeholder="Example: Donald Trump is the president of America",
-    key="input_text"
-)
-
 # Example buttons
 st.markdown("### Try Examples:")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    if st.button("🟢 Fact-Verifiable"):
-        st.session_state.input_text = "Donald Trump is the president of America"
-        st.rerun()
+    if st.button("🟢 Fact-Verifiable", key="btn1"):
+        st.session_state['main_input'] = "Donald Trump is the president of America"
 
 with col2:
-    if st.button("🔴 Fake News"):
-        st.session_state.input_text = "BREAKING!!! Scientists SHOCKED by miracle cure that doctors don't want you to know about!!!"
-        st.rerun()
+    if st.button("🔴 Fake News", key="btn2"):
+        st.session_state['main_input'] = "BREAKING!!! Scientists SHOCKED by miracle cure that doctors don't want you to know about!!!"
 
 with col3:
-    if st.button("🟢 Real News"):
-        st.session_state.input_text = "Government announces new infrastructure bill to improve transportation networks across the country"
-        st.rerun()
+    if st.button("🟢 Real News", key="btn3"):
+        st.session_state['main_input'] = "Government announces new infrastructure bill to improve transportation networks across the country"
 
 with col4:
-    if st.button("🔴 False Claim"):
-        st.session_state.input_text = "Joe Biden is currently the president of the United States"
-        st.rerun()
+    if st.button("🔴 False Claim", key="btn4"):
+        st.session_state['main_input'] = "Joe Biden is currently the president of the United States"
 
+# Get text from example or user input
+# (Toàn bộ khối logic 'if example_text...' đã được xóa)
+
+user_input = st.text_area(
+    "Paste news title or content:",
+    # Tham số 'value' đã được xóa. 
+    # Streamlit sẽ tự động lấy giá trị từ 'st.session_state.main_input'
+    height=150,
+    placeholder="Example: Donald Trump is the president of America",
+    key="main_input" 
+)
 # Analyze button
 if st.button("🔍 Analyze with Fact-Checking", type="primary", use_container_width=True):
     if not user_input:

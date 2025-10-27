@@ -210,4 +210,76 @@ If you use this dataset, please cite the following papers:
 [FakeNewsNet]:<https://arxiv.org/abs/1809.01286>
 
 (C) 2019 Arizona Board of Regents on Behalf of ASU
+//by HoaiHieu
+# 🔍 Fake News Detector - AI-Powered News Verification System
 
+Hệ thống phát hiện tin giả sử dụng Machine Learning và Fact-Checking tự động.
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+## 📋 Mục Lục
+
+- [Tổng Quan](#tổng-quan)
+- [Tính Năng](#tính-năng)
+- [Cài Đặt](#cài-đặt)
+- [Sử Dụng](#sử-dụng)
+- [Cấu Trúc Project](#cấu-trúc-project)
+- [Cách Hoạt Động](#cách-hoạt-động)
+- [Kết Quả](#kết-quả)
+- [Giới Hạn](#giới-hạn)
+- [Phát Triển Thêm](#phát-triển-thêm)
+
+---
+
+## 🎯 Tổng Quan
+
+**Fake News Detector** là một hệ thống hai lớp kết hợp:
+
+1. **Machine Learning** (Logistic Regression + TF-IDF) - 78.3% accuracy
+2. **Fact-Checking tự động** (Wikipedia + Knowledge Base) - FREE
+
+### ⚡ Điểm Nổi Bật
+
+- ✅ **Hoàn toàn MIỄN PHÍ** - Không cần API key
+- ✅ **Không cần thẻ tín dụng**
+- ✅ **Fact-checking tự động** từ Wikipedia
+- ✅ **Giao diện web đẹp** với Streamlit
+- ✅ **Độ chính xác cao** (~85-90% với fact-checking)
+
+---
+
+## 🚀 Tính Năng
+
+### 1. ML Pattern Detection (Layer 1)
+- Phân tích văn phong, ngôn ngữ
+- Phát hiện clickbait, sensationalism
+- TF-IDF vectorization (5000 features)
+- Model: Logistic Regression (78.3% accuracy)
+
+### 2. Fact Verification (Layer 2)
+- Kiểm tra sự thật từ knowledge base
+- Tìm kiếm Wikipedia tự động
+- Cross-reference với trusted sources
+- **Override ML nếu phát hiện fact sai**
+
+### 3. Intelligent Decision
+- Kết hợp 2 layers
+- Ưu tiên fact-checking khi có
+- Confidence scoring
+- Detailed explanation
+
+---
+
+## 📦 Cài Đặt
+
+### Yêu Cầu Hệ Thống
+
+- Python 3.8 trở lên
+- pip (Python package manager)
+- 2GB RAM (tối thiểu)
+- Kết nối internet (cho fact-checking)
+
+### Bước 1: Clone Repository
+```bash
